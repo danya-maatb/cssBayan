@@ -6,18 +6,98 @@
 
 @media screen and (max-width:819px) {
     p { 
-        font-size: small;
+        font-size: 1rem;
+    }
+
+    label {
+      height: 4rem;
     }
   }
 
   @media screen and (min-width: 820px) and (max-width:1919px) {
     p { 
-        font-size: medium;
+        font-size: 1.5rem;
+    }
+
+    label {
+      height: 6rem;
     }
   }
 
   @media screen and (min-width: 1920px) {
     p { 
-        font-size: large;
+        font-size: 2rem;
+    }
+
+    label:hover {
+      height: 21rem;
+      transition: all 0.2s linear;
+    }
+
+    label:hover p .icon {
+      transform: none;
+      transition: all 0.4s;
+    }
+
+    label {
+      height: 8rem;
+    }
+
+    input:checked + label {
+      height: 31rem;
+      transition: all 0.2s linear;
+    }
+
+    label img {
+      display: block;
+      height: 22rem;
+      margin: 3rem auto;
     }
   }
+
+  input {
+    display: none;
+  }
+
+  p {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+
+    border: 1px solid saddlebrown;
+  }
+
+  label {
+    display: block;
+    border: 0.1em solid black;
+    border-radius: 1em;
+    width: 90%;
+    margin: 2% auto;
+    padding: 0.5% 5%;
+    overflow: hidden;
+    transition: all 0.2s linear;
+  }
+
+  input:checked + label {
+    height: 21rem;
+    transition: all 0.2s linear;
+  }
+
+  .icon {
+    margin-right: 1%;
+    transform: rotate(45deg);
+    transition: 0.4s;
+  }
+
+  input:checked + label p .icon {
+    transform: none;
+    transition: all 0.4s;
+  }
+
+  label img {
+    display: block;
+    height: 12rem;
+    margin: 3rem auto;
+  }
+
+ 
