@@ -5,34 +5,78 @@
 }
 
 @media screen and (max-width:819px) {
+    h1 {
+      font-size: 2rem;
+    }
+  
     p { 
         font-size: 1rem;
     }
 
     label {
       height: 4rem;
+      transition: all 0.3s linear;
     }
+
+    input:checked + label {
+      height: 21rem;
+      transition: all 0.3s linear;
+      background: linear-gradient(rgba(255, 0, 0, 0.098), white, white, white, white)
+    }
+
+    label img {
+      display: block;
+      height: 12rem;
+      margin: 3rem auto;
+    }
+
+
   }
 
   @media screen and (min-width: 820px) and (max-width:1919px) {
+    h1 {
+      font-size: 3rem;
+    }
+  
     p { 
         font-size: 1.5rem;
     }
 
     label {
       height: 6rem;
+      background: none;
+      transition: all 0.3s linear;
     }
+
+    input:checked + label {
+      height: 26rem;
+      transition: all 0.3s linear;
+      background: linear-gradient(rgba(255, 0, 0, 0.098), white, white, white, white)
+    }
+
+    label img {
+      display: block;
+      height: 18rem;
+      margin: 3rem auto;
+    }
+
+
   }
 
   @media screen and (min-width: 1920px) {
+    h1 {
+      font-size: 4rem;
+    }
+  
     p { 
         font-size: 2rem;
     }
-
-    label:hover {
-      height: 21rem;
-      transition: all 0.2s linear;
+    .icon {
+      display: none;
     }
+    .content:hover div label p .icon {
+      display: block;
+    }  
 
     label:hover p .icon {
       transform: none;
@@ -41,11 +85,13 @@
 
     label {
       height: 8rem;
+      transition: all 0.3s linear;
     }
 
-    input:checked + label {
+    input:checked + label, label:hover {
       height: 31rem;
-      transition: all 0.2s linear;
+      transition: all 0.3s linear;
+      background: linear-gradient(rgba(255, 0, 0, 0.098), white, white, white, white)
     }
 
     label img {
@@ -64,7 +110,6 @@
     justify-content: space-between;
     width: 100%;
 
-    border: 1px solid saddlebrown;
   }
 
   label {
@@ -76,11 +121,7 @@
     padding: 0.5% 5%;
     overflow: hidden;
     transition: all 0.2s linear;
-  }
-
-  input:checked + label {
-    height: 21rem;
-    transition: all 0.2s linear;
+    background-color: #fff;
   }
 
   .icon {
@@ -94,10 +135,5 @@
     transition: all 0.4s;
   }
 
-  label img {
-    display: block;
-    height: 12rem;
-    margin: 3rem auto;
-  }
 
  
