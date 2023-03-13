@@ -139,18 +139,29 @@
     filter: none;
   }
 
-  input:checked + label {
+  input:checked + label img {
     animation-name: click;
-    animation-duration: 0.3s;
+    animation-duration: 1s;
     animation-timing-function: linear;
   }
 
   @keyframes click {
     0%   {filter: none;}
-    30%  {filter: blur(0.1rem);}
+    30%  {filter: opacity(0.5);}
     100% {filter: none;}
   }
 
+  input:checked + label p {
+    animation-name: clickText;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+  }
+
+  @keyframes clickText {
+    0%   {color: black;}
+    30%  {color: #ff9e03;}
+    100% {color: black;}
+  }
 
   .icon {
     margin-right: 1%;
